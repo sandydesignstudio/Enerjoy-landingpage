@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enerjoy Solar | Smarter Energy. Lifelong Savings.</title>
+<meta name="description" content="Custom rooftop solar solutions in Chennai & Tamil Nadu for home, commercial, and industrial properties. Book your free site visit today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#113d3e;
+  --ink-2:#0a2526;
+  --sun:#ef8329;
+  --sun-deep:#d86f18;
+  --sun-soft:#fef4ea;
+  --green:#113d3e;
+  --green-dark:#0a2526;
+  --green-light:#185355;
+  --green-soft:#e6f0f0;
+  --bg:#ffffff;
+  --bg-alt:#f4f8f8;
+  --card:#ffffff;
+  --text:#113d3e;
+  --muted:#425f60;
+  --line:#d0dfdf;
+  --shadow:0 1px 2px rgba(17,61,62,.05),0 12px 32px -12px rgba(17,61,62,.14);
+  --r-lg:22px; --r-md:14px; --r-sm:10px;
+  --sp-section:clamp(72px,9vw,124px);
+  --font-h:'Outfit',system-ui,sans-serif;
+  --font-b:'Plus Jakarta Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--font-b);background:var(--bg);color:var(--text);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-h);line-height:1.12;letter-spacing:-.02em;font-weight:700}
+a{color:inherit;text-decoration:none}
+img,svg{max-width:100%;display:block}
+.container{width:min(1200px,100% - 48px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 16px/1 var(--font-b);padding:17px 28px;border-radius:999px;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn:active{transform:scale(.98)}
+.btn-sun{background:linear-gradient(135deg,#ef8329,#d86f18);color:#ffffff;box-shadow:0 10px 24px -10px rgba(239,131,41,.6)}
+.btn-sun:hover{background:linear-gradient(135deg,#f2913e,#e2751c);transform:translateY(-2px);color:#ffffff}
+.btn-glass{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(8px)}
+.btn-glass:hover{background:rgba(255,255,255,.18)}
+.btn-block{width:100%}
+.btn-sm{padding:12px 20px;font-size:14.5px}
+.btn-wa{background:#22c55e;color:#04210e}
+.btn-outline{border:1.5px solid var(--line);color:var(--text);background:transparent}
+
+/* Logo & Header */
+.site-logo{height:46px;width:auto;display:block;object-fit:contain}
+.site-logo-footer{height:52px;width:auto;display:block;object-fit:contain;background:#ffffff;padding:6px 16px;border-radius:12px}
+.site-header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s,padding .3s;padding:16px 0}
+.site-header.scrolled{background:rgba(17,61,62,.95);backdrop-filter:blur(14px);box-shadow:0 8px 30px -14px rgba(0,0,0,.5);padding:10px 0}
+.header-container{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand-mark{width:42px;height:42px;border-radius:12px;background:rgba(245,165,36,.16);display:grid;place-items:center}
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.brand-name{font:800 19px var(--font-h);letter-spacing:.14em}
+.brand-sub{font:600 11px var(--font-b);letter-spacing:.42em;color:var(--sun);margin-top:5px}
+.header-actions{display:flex;align-items:center;gap:26px}
+.header-phone{display:flex;align-items:center;gap:12px;color:#fff}
+.header-phone svg{color:var(--sun)}
+.header-phone span{display:flex;flex-direction:column;line-height:1.25}
+.header-phone small{font-size:12px;color:rgba(255,255,255,.65)}
+.header-phone b{font:600 15px var(--font-b)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:#09090b;padding:clamp(130px,14vw,180px) 0 clamp(96px,10vw,148px)}
+.panels{position:absolute;left:-15%;right:-15%;bottom:-18%;height:62%;transform:perspective(900px) rotateX(62deg);transform-origin:bottom;opacity:.5;
+  background:
+   linear-gradient(90deg,rgba(255,255,255,.22) 1.5px,transparent 1.5px) 0 0/90px 100%,
+   linear-gradient(0deg,rgba(255,255,255,.22) 1.5px,transparent 1.5px) 0 0/100% 60px,
+   linear-gradient(135deg,#1c4a7a,#0e2a48 60%,#1c4a7a);
+  -webkit-mask-image:linear-gradient(to top,#000 40%,transparent);mask-image:linear-gradient(to top,#000 40%,transparent)}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(40px,6vw,88px);align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;font:600 13px var(--font-b);letter-spacing:.14em;color:var(--sun);margin-bottom:28px}
+.hero-tag::before{content:"";width:34px;height:2px;background:var(--sun)}
+.hero h1{font-size:clamp(40px,5.6vw,76px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--sun)}
+.hero-sub{margin-top:28px;font-size:clamp(18px,1.6vw,21px);color:rgba(255,255,255,.8);max-width:520px}
+.hero-points{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:32px}
+.hero-points li{list-style:none;display:flex;align-items:center;gap:10px;font-weight:500;color:rgba(255,255,255,.92)}
+.hero-points svg{color:var(--sun);flex:none}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:44px}
+.founder-chip{display:inline-flex;align-items:center;gap:16px;margin-top:52px;padding:12px 26px 12px 12px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px)}
+.avatar{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--sun),#ffcf7a);color:#2a1a00;font:800 18px var(--font-h);flex:none}
+.avatar-img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:center top;flex:none;border:2px solid #ef8329}
+.founder-chip div{display:flex;flex-direction:column;line-height:1.3}
+.founder-chip small{font-size:11.5px;letter-spacing:.12em;color:var(--sun);font-weight:600}
+.founder-chip b{font:600 17px var(--font-h)}
+.founder-chip span{font-size:13.5px;color:rgba(255,255,255,.65)}
+
+/* Form card */
+.form-card{background:var(--card);color:var(--text);border-radius:var(--r-lg);padding:clamp(28px,3.2vw,42px);box-shadow:0 30px 60px -24px rgba(0,0,0,.55);border:1px solid var(--line)}
+.form-card.dark{background:rgba(10,20,34,.78);color:#fff;border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(18px)}
+.form-title{font-size:26px}
+.form-desc{margin:8px 0 28px;color:var(--muted);font-size:15.5px}
+.dark .form-desc{color:rgba(255,255,255,.66)}
+.lead-form{display:flex;flex-direction:column;gap:18px}
+.field label,.field-label{display:block;font:600 13.5px var(--font-b);margin-bottom:8px;color:var(--muted)}
+.dark .field-label{color:rgba(255,255,255,.7)}
+.input{width:100%;font:500 16px var(--font-b);padding:15px 18px;border-radius:var(--r-sm);border:1.5px solid var(--line);background:var(--bg);color:var(--text);transition:border-color .2s,box-shadow .2s}
+.dark .input{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:#fff}
+.input::placeholder{color:#8b98a9}
+.input:focus{outline:none;border-color:var(--sun);box-shadow:0 0 0 4px rgba(245,165,36,.2)}
+select.input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23f5a524' stroke-width='2.5'%3E%3Cpath d='M3 6l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:44px}
+.dark select.input option{color:#1c1917}
+.pills{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pill input{position:absolute;opacity:0;pointer-events:none}
+.pill span{display:block;text-align:center;padding:12px 8px;border-radius:var(--r-sm);border:1.5px solid rgba(255,255,255,.18);font-weight:600;font-size:15px;cursor:pointer;transition:.2s}
+.pill input:checked+span{background:var(--sun);border-color:var(--sun);color:#1a1200}
+.pill input:focus-visible+span{outline:3px solid var(--sun);outline-offset:2px}
+.form-note{font-size:13.5px;color:rgba(255,255,255,.6);text-align:center}
+
+
+/* Hero: sleek dark black theme, dot pattern + solar image layer */
+.hero-pattern{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.12) 1.3px,transparent 1.5px);background-size:28px 28px;-webkit-mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.45) 55%,transparent 80%);mask-image:linear-gradient(90deg,#000 0%,rgba(0,0,0,.45) 55%,transparent 80%)}
+.hero-solar{position:absolute;top:0;right:0;bottom:0;width:70%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 40%);mask-image:linear-gradient(90deg,transparent 0,#000 40%)}
+.hero-solar img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+.hero-solar::after{content:"";position:absolute;inset:auto 0 0 0;height:25%;background:linear-gradient(0deg,#09090b,transparent)}
+.hero-tag{color:#f5a524}
+.hero-tag::before{background:#f5a524}
+.hero h1{color:#ffffff}
+.hero h1 em{color:#f5a524}
+.hero-sub{color:rgba(255,255,255,0.78)}
+.hero-points li{color:rgba(255,255,255,0.92)}
+.hero-points svg{color:#f5a524}
+.hero .btn-glass{background:rgba(255,255,255,.08);color:#ffffff;border:1.5px solid rgba(255,255,255,.22);backdrop-filter:blur(10px)}
+.hero .btn-glass:hover{border-color:#f5a524;background:rgba(255,255,255,.16)}
+.founder-chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);box-shadow:0 10px 30px -14px rgba(0,0,0,.5);backdrop-filter:blur(12px)}
+.founder-chip small{color:#f5a524}
+.founder-chip b{color:#ffffff}
+.founder-chip span{color:rgba(255,255,255,.65)}
+.hero .form-card{background:rgba(15,15,20,0.85);color:#ffffff;border:1px solid rgba(255,255,255,0.16);box-shadow:0 34px 70px -28px rgba(0,0,0,.85);backdrop-filter:blur(18px)}
+.hero .form-title{color:#ffffff}
+.hero .form-desc,.hero .field-label{color:rgba(255,255,255,0.72)}
+.hero .input{background:rgba(255,255,255,0.06);color:#ffffff;border-color:rgba(255,255,255,0.18)}
+.hero .input::placeholder{color:rgba(255,255,255,0.4)}
+.hero .input option{background:#121217;color:#fff}
+.hero .pill span{border-color:rgba(255,255,255,0.18);color:#ffffff;background:rgba(255,255,255,0.06)}
+.hero .pill input:checked+span{background:#f5a524;border-color:#f5a524;color:#1a1200}
+.hero .form-note{color:rgba(255,255,255,0.55)}
+/* Header on dark hero */
+.site-header .brand{color:#ffffff}
+.site-header .brand-sub{color:#f5a524}
+.site-header .brand-mark{background:rgba(245,165,36,0.2)}
+.site-header .header-phone{color:#ffffff}
+.site-header .header-phone small{color:rgba(255,255,255,0.65)}
+.site-header .header-phone svg{color:#f5a524}
+.site-header.scrolled{background:rgba(9,9,11,0.92);box-shadow:0 8px 30px -16px rgba(0,0,0,0.6)}
+@media (max-width:1024px){.hero-solar{width:100%;opacity:.4}}
+
+/* Trust strip */
+.trust{position:relative;z-index:2;margin-top:-52px}
+.trust-grid{display:grid;grid-template-columns:repeat(5,1fr);background:var(--card);border-radius:var(--r-lg);box-shadow:var(--shadow);border:1px solid var(--line);padding:10px}
+.trust-item{padding:22px 18px;text-align:center;position:relative}
+.trust-item+.trust-item::before{content:"";position:absolute;left:0;top:24%;bottom:24%;width:1px;background:var(--line)}
+.trust-item b{display:block;font:700 18px var(--font-h)}
+.trust-item span{font-size:14px;color:var(--muted)}
+
+/* Sections */
+.section{padding:var(--sp-section) 0}
+.section.alt{background:var(--bg-alt)}
+.section-head{max-width:720px;margin:0 auto clamp(48px,6vw,80px);text-align:center}
+.eyebrow{display:inline-block;font:600 14px var(--font-b);color:var(--sun-deep);margin-bottom:16px}
+.section-head h2,.split-head h2{font-size:clamp(30px,3.8vw,48px)}
+.section-head h2 span{color:var(--muted);font-weight:600}
+.section-head p{margin-top:20px;color:var(--muted);font-size:18px}
+
+.grid{display:grid;gap:28px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:36px;box-shadow:var(--shadow)}
+.icon-box{width:56px;height:56px;border-radius:16px;background:var(--sun-soft);display:grid;place-items:center;color:var(--sun-deep);margin-bottom:26px}
+.card h3{font-size:22px;margin-bottom:12px}
+.card p{color:var(--muted);font-size:16px}
+.bridge{margin-top:64px;text-align:center;font:600 clamp(24px,3vw,34px) var(--font-h)}
+.bridge b{color:var(--sun-deep)}
+
+.feature{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start;box-shadow:none;transition:border-color .2s,transform .2s}
+.feature:hover{border-color:var(--sun);transform:translateY(-3px)}
+.feature .icon-box{margin:0}
+
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative;counter-reset:s}
+.steps::before{content:"";position:absolute;top:29px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,var(--sun) 0 10px,transparent 10px 20px);opacity:.7}
+.step{position:relative;text-align:center;padding:0 6px}
+.step-num{position:relative;width:60px;height:60px;margin:0 auto 28px;border-radius:50%;background:var(--sun);color:#1a1200;display:grid;place-items:center;font:800 20px var(--font-h);box-shadow:0 0 0 8px var(--bg-alt)}
+.step h3{font-size:21px;margin-bottom:12px}
+.step p{color:var(--muted);font-size:16px}
+
+/* Solutions */
+.sol{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.sol-art{position:relative;height:230px;display:block;overflow:hidden;background:#121217}
+.sol-art img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.card.sol:hover .sol-art img{transform:scale(1.06)}
+.sol-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.4) 0%,transparent 40%,rgba(0,0,0,0.25) 100%);pointer-events:none}
+.sol-chip{position:absolute;left:18px;top:18px;z-index:2;background:rgba(18,18,22,0.75);color:#fff;font:600 12.5px var(--font-b);padding:7px 14px;border-radius:999px;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.22)}
+.sol-body{padding:32px;display:flex;flex-direction:column;flex:1}
+.sol-body h3{font-size:24px;margin-bottom:12px}
+.sol-body p{color:var(--muted);font-size:16px;margin-bottom:22px}
+.checks{list-style:none;display:grid;gap:12px;margin-top:auto;padding-top:22px;border-top:1px solid var(--line)}
+.checks li{display:flex;gap:12px;font-weight:500;font-size:15.5px;align-items:flex-start}
+.checks svg{color:var(--sun-deep);flex:none;margin-top:4px}
+.center-cta{text-align:center;margin-top:64px}
+
+/* Assessment */
+.assess{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,88px);align-items:center}
+.split-head h2{margin-bottom:20px}
+.split-head p{color:var(--muted);font-size:18px;max-width:520px}
+.estimator{margin-top:40px;background:var(--ink);color:#fff;border-radius:var(--r-lg);padding:32px}
+.estimator h4{font:600 14px var(--font-b);color:var(--sun);margin-bottom:22px}
+.est-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 20px}
+.est span{display:block;font-size:13.5px;color:rgba(255,255,255,.62);margin-bottom:4px}
+.est b{font:700 clamp(24px,2.6vw,32px) var(--font-h)}
+.est b.hi{color:var(--sun)}
+.est-foot{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:rgba(255,255,255,.55)}
+.slider-val{font:700 30px var(--font-h);margin-bottom:14px;color:var(--sun-deep)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:99px;background:linear-gradient(90deg,var(--sun) var(--p,10%),var(--line) var(--p,10%));outline-offset:6px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;border:4px solid var(--sun);box-shadow:0 4px 10px rgba(0,0,0,.25);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:4px solid var(--sun);cursor:pointer}
+.range-scale{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-top:10px}
+
+/* Founder */
+.founder{display:grid;grid-template-columns:.95fr 1.05fr;gap:0;background:var(--ink);color:#fff;border-radius:28px;overflow:hidden;box-shadow:var(--shadow)}
+.founder-art{position:relative;min-height:420px;display:block;overflow:hidden;background:#113d3e}
+.founder-photo{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .4s ease}
+.founder:hover .founder-photo{transform:scale(1.03)}
+.founder-art .avatar{width:170px;height:170px;font-size:56px;box-shadow:0 0 0 12px rgba(255,255,255,.08),0 0 0 26px rgba(255,255,255,.04)}
+.founder-body{padding:clamp(36px,5vw,72px)}
+.founder-body .eyebrow{color:var(--sun)}
+.founder-body h2{font-size:clamp(30px,3.4vw,42px)}
+.role{color:var(--sun);font-weight:600;margin:8px 0 30px}
+blockquote{font:500 clamp(18px,1.7vw,22px)/1.65 var(--font-b);color:rgba(255,255,255,.88);border-left:3px solid var(--sun);padding-left:26px}
+.badges{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.badge{padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);font-size:14.5px;font-weight:600}
+
+/* FAQ */
+.faq-wrap{max-width:860px}
+.faq{display:grid;gap:16px}
+.faq-item{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);transition:border-color .2s,box-shadow .2s}
+.faq-item.open{border-color:var(--sun);box-shadow:var(--shadow)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:24px 28px;background:none;border:0;color:var(--text);font:600 18px var(--font-h);cursor:pointer;border-radius:var(--r-md)}
+.faq-ico{flex:none;width:32px;height:32px;border-radius:50%;background:var(--sun-soft);color:var(--sun-deep);display:grid;place-items:center;font-size:22px;line-height:1;transition:transform .3s,background .3s}
+.faq-item.open .faq-ico{transform:rotate(45deg);background:var(--sun);color:#1a1200}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-a>div{overflow:hidden}
+.faq-a p{padding:0 28px 26px;color:var(--muted);font-size:16.5px;max-width:70ch}
+
+/* Final CTA */
+.final{position:relative;overflow:hidden;color:#fff;padding:var(--sp-section) 0;background:radial-gradient(900px 500px at 10% 110%,rgba(245,165,36,.35),transparent 60%),linear-gradient(160deg,#0b1626,#14304d)}
+.final .panels{opacity:.28;bottom:-30%}
+.final-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,88px);align-items:center}
+.final h2{font-size:clamp(34px,4.6vw,58px);font-weight:800;margin:0 0 24px}
+.final-sub{font-size:19px;color:rgba(255,255,255,.8);max-width:480px}
+.final-actions{display:flex;flex-wrap:wrap;gap:14px;margin:40px 0 32px}
+.final-phone{display:inline-flex;align-items:center;gap:12px;font:600 20px var(--font-h);color:#fff}
+.final-phone svg{color:var(--sun)}
+
+/* Footer */
+.site-footer{background:#08111e;color:rgba(255,255,255,.72);padding:72px 0 32px;font-size:15.5px}
+.footer-top{display:flex;justify-content:space-between;gap:48px;flex-wrap:wrap}
+.footer-tag{margin-top:16px;color:rgba(255,255,255,.55)}
+.footer-contact{display:grid;gap:12px;max-width:380px}
+.footer-contact b{color:#fff;font-weight:600}
+.footer-contact a:hover{color:var(--sun)}
+.footer-bottom{margin-top:56px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1);font-size:14px;color:rgba(255,255,255,.45)}
+
+/* Floating */
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:40;width:60px;height:60px;border-radius:50%;background:#22c55e;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(34,197,94,.7);transition:transform .2s}
+.wa-float:hover{transform:scale(1.07)}
+.wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #22c55e;animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.6);opacity:0}}
+.mobile-bar{display:none}
+
+/* Modal / Thank You Page */
+.modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:24px;background:rgba(10,34,35,.82);backdrop-filter:blur(8px)}
+.modal.show{display:grid}
+.modal-dialog{position:relative;width:min(520px,100%);background:var(--card);color:var(--text);border-radius:26px;padding:44px 36px 36px;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.6);border:1px solid var(--line);animation:pop .35s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes pop{from{transform:scale(.92);opacity:0}to{transform:none;opacity:1}}
+.modal-close{position:absolute;top:16px;right:18px;width:38px;height:38px;border-radius:50%;border:0;background:var(--bg-alt);color:var(--text);font-size:24px;cursor:pointer;line-height:1}
+.modal-close:hover{background:var(--line)}
+.modal-ico{width:76px;height:76px;margin:0 auto 16px;border-radius:50%;background:rgba(239,131,41,0.14);display:grid;place-items:center;color:var(--sun)}
+.thankyou-badge{display:inline-block;background:rgba(239,131,41,0.15);color:#ef8329;font:700 12px var(--font-b);padding:6px 14px;border-radius:999px;letter-spacing:.08em;margin-bottom:12px}
+.thankyou-subtitle{color:var(--muted);font-size:15.5px;margin-bottom:20px}
+.summary-card{background:var(--bg-alt);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:20px;text-align:left;display:grid;gap:8px;font-size:14.5px}
+.summary-row{display:flex;justify-content:space-between;align-items:center}
+.summary-row span{color:var(--muted)}
+.summary-row strong{color:var(--text);font-weight:600}
+.next-step-note{font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.5}
+.modal h3{font-size:26px;margin-bottom:8px}
+.modal-actions{display:grid;gap:12px}
+
+/* Responsive */
+@media (max-width:1024px){
+  .hero-grid,.assess,.final-grid{grid-template-columns:1fr}
+  .g3{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:48px}
+  .steps::before{display:none}
+  .trust-grid{grid-template-columns:repeat(3,1fr)}
+  .trust-item:nth-child(4)::before{display:none}
+  .header-phone span{display:none}
+}
+@media (max-width:768px){
+  body{font-size:16.5px;padding-bottom:84px}
+  .container{width:min(1200px,100% - 36px)}
+  .g3,.g2{grid-template-columns:1fr}
+  .btn-header{display:none}
+  .header-phone span{display:flex}
+  .header-phone small{display:none}
+  .trust{margin-top:-36px}
+  .trust-grid{grid-template-columns:1fr 1fr;padding:6px}
+  .trust-item{padding:18px 10px}
+  .trust-item::before{display:none!important}
+  .trust-item:last-child{grid-column:1/-1}
+  .founder{grid-template-columns:1fr}
+  .founder-art{min-height:260px}
+  .feature{grid-template-columns:1fr;gap:18px}
+  .steps{grid-template-columns:1fr}
+  .hero-cta .btn{width:100%}
+  .final-actions .btn{width:100%}
+  .est-grid{gap:22px 14px}
+  .wa-float{display:none}
+  .mobile-bar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:45;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(28,25,23,.96);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.1)}
+  .mobile-bar .btn{flex:1}
+  .mobile-bar .wa{flex:none;width:54px;padding:0;background:#22c55e;color:#fff}
+  .faq-q{padding:20px 20px;font-size:17px}
+  .faq-a p{padding:0 20px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+/* ===== Warm white + orange gradient theme ===== */
+.btn-sun{background:linear-gradient(135deg,#ffb636,#ff8a1f);color:#1a1200;box-shadow:0 12px 26px -10px rgba(255,138,31,.7)}
+.btn-sun:hover{background:linear-gradient(135deg,#ffc24d,#ff9633)}
+.section.alt{background:radial-gradient(800px 420px at 92% 0%,rgba(245,165,36,.18),transparent 62%),radial-gradient(700px 420px at 0% 100%,rgba(255,138,31,.10),transparent 62%),#fff9f0}
+.hero{background:radial-gradient(760px 460px at 6% 0%,rgba(245,165,36,.18),transparent 62%),radial-gradient(620px 380px at 46% 100%,rgba(255,138,31,.10),transparent 65%),#09090b}
+#why-solar{background:radial-gradient(700px 320px at 50% 0%,rgba(255,138,31,.08),transparent 70%),#fff}
+#faq{background:radial-gradient(700px 360px at 100% 0%,rgba(245,165,36,.12),transparent 65%),#fff}
+.step-num{background:linear-gradient(135deg,#ffb636,#ff7a1a)}
+.faq-item.open .faq-ico{background:linear-gradient(135deg,#ffb636,#ff7a1a)}
+.card{box-shadow:0 1px 2px rgba(28,25,23,.04),0 16px 36px -18px rgba(217,138,11,.28)}
+
+/* estimator */
+.estimator{background:linear-gradient(135deg,#ffbf47 0%,#ff8a1f 100%);color:#1c1917;box-shadow:0 24px 50px -24px rgba(255,122,26,.65)}
+.estimator h4{color:#5a2a00}
+.est span{color:rgba(28,25,23,.72)}
+.est b.hi{color:#fff}
+.est-foot{border-top:1px solid rgba(28,25,23,.18);color:rgba(28,25,23,.7)}
+
+/* solution cards */
+.sol-art{background:linear-gradient(180deg,#ffd58f,#fff3dc)}
+.sol-art .glow{background:radial-gradient(circle,rgba(255,138,31,.55),transparent 65%)}
+.sol-chip{background:#fff;color:#b86a00;backdrop-filter:none;box-shadow:0 6px 16px -8px rgba(217,138,11,.5)}
+
+/* founder */
+.founder{background:linear-gradient(135deg,#ffffff 0%,#fff2dc 100%);color:#1c1917;border:1px solid #f3e3c8}
+.founder-art{background:radial-gradient(circle at 28% 18%,rgba(255,255,255,.55),transparent 55%),linear-gradient(160deg,#ffbd4a,#ff7a1a)}
+.founder-art .avatar{background:#fff;color:#c2570a;box-shadow:0 0 0 12px rgba(255,255,255,.3),0 0 0 26px rgba(255,255,255,.16)}
+.founder-body .eyebrow,.role{color:#b86a00}
+blockquote{color:#3b342c}
+.badge{background:#fff;border:1px solid #f0dcb9;color:#1c1917}
+
+/* final CTA */
+.final{color:#1c1917;background:radial-gradient(820px 500px at 100% 0%,rgba(255,138,31,.24),transparent 60%),radial-gradient(720px 480px at 0% 100%,rgba(245,165,36,.22),transparent 60%),#fff}
+.final .panels{display:none}
+.final-sub{color:#4b4338}
+.final .btn-glass{background:#fff;color:#1c1917;border:1.5px solid #e6d3b0;backdrop-filter:none}
+.final .btn-glass:hover{border-color:#f5a524;background:#fffaf0}
+.final-phone{color:#1c1917}
+.final-phone svg{color:#d98a0b}
+.final .form-card{background:rgba(255,255,255,.96);color:#1c1917;border:1px solid #f0e2c8;box-shadow:0 34px 70px -28px rgba(217,138,11,.4)}
+.final .form-desc,.final .field-label{color:#5c5245}
+.final .input{background:#fff;color:#1c1917;border-color:#e9dcc3}
+.final .pill span{border-color:#e9dcc3;color:#1c1917;background:#fff}
+.final .pill input:checked+span{background:linear-gradient(135deg,#ffb636,#ff8a1f);border-color:#ff9a2a;color:#1a1200}
+.final .form-note{color:#7a6f60}
+.hero .pill input:checked+span{background:linear-gradient(135deg,#ffb636,#ff8a1f);border-color:#ff9a2a}
+
+/* footer */
+.site-footer{background:linear-gradient(180deg,#fff 0%,#ffefd0 100%);color:#5c5245;border-top:1px solid #f3e3c8}
+.site-footer .brand{color:#1c1917}
+.site-footer .brand-sub{color:#b86a00}
+.site-footer .brand-mark{background:#fff3d9}
+.footer-tag{color:#6b6053}
+.footer-contact b{color:#1c1917}
+.footer-contact a:hover{color:#c2570a}
+.footer-bottom{border-top:1px solid rgba(28,25,23,.12);color:#7a6f60}
+
+/* mobile bar + modal */
+.mobile-bar{background:rgba(255,255,255,.96);border-top:1px solid #f0e2c8}
+.modal-ico{background:linear-gradient(135deg,#ffe3ae,#ffc46b)}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header" id="header">
+  <div class="container header-container">
+    <a href="#" class="brand" aria-label="Enerjoy Solar home">
+      <img src="enerjoy_logo.png" alt="Enerjoy Solar - Smarter Energy. Lifelong Savings." class="site-logo" />
+    </a>
+    <div class="header-actions">
+      <a href="tel:+919962420007" class="header-phone" data-track="Contact" data-ctx="Header Phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span><small>Talk to a solar expert</small><b>+91 99624 20007</b></span>
+      </a>
+      <a href="#hero-form" class="btn btn-sun btn-sm btn-header" data-track="CTA_Click" data-ctx="Header CTA">Get free consultation</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-pattern" aria-hidden="true"></div>
+  <div class="hero-solar" aria-hidden="true">
+    <img src="solar_hero_real.jpg" alt="Modern Rooftop Solar Panels" />
+  </div>
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-tag">SMARTER ENERGY. LIFELONG SAVINGS.</div>
+      <h1>Stop paying more for power. <em>Start generating your own.</em></h1>
+      <p class="hero-sub">Custom solar solutions designed around your energy usage, property and budget.</p>
+      <ul class="hero-points">
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Free site visit</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Customized system</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>End-to-end support</li>
+      </ul>
+      <div class="hero-cta">
+        <a href="#hero-form" class="btn btn-sun" data-track="CTA_Click" data-ctx="Hero Free Consultation">Get free solar consultation →</a>
+        <a href="#assessment" class="btn btn-glass" data-track="CTA_Click" data-ctx="Hero Estimator CTA">Estimate my system</a>
+      </div>
+      <div class="founder-chip">
+        <img src="aravindh.jpg" alt="Er. Aravind J, Founder &amp; Lead Engineer" class="avatar-img" />
+        <div><small>FOUNDER &amp; LEAD ENGINEER</small><b>Er. Aravind J</b><span>Oversees every custom system consultation</span></div>
+      </div>
+    </div>
+
+    <div id="hero-form">
+      <div class="form-card">
+        <h2 class="form-title">Get a free solar assessment</h2>
+        <p class="form-desc">Tell us about your property. We'll handle the rest.</p>
+        <form class="lead-form" data-form-location="Hero Section">
+          <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="utm_term">
+          <div class="field"><input class="input" type="text" name="name" placeholder="Full name" autocomplete="name" required aria-label="Full name"></div>
+          <div class="field"><input class="input" type="tel" name="phone" placeholder="Phone number" inputmode="numeric" pattern="[0-9]{10}" title="Enter a valid 10-digit phone number" autocomplete="tel-national" required aria-label="Phone number"></div>
+          <div class="field"><input class="input" type="email" name="email" placeholder="Email address" autocomplete="email" required aria-label="Email address"></div>
+          <div class="field"><input class="input" type="text" name="location" placeholder="Location (city / area)" required aria-label="Location"></div>
+          <div class="field">
+            <span class="field-label">Property type</span>
+            <div class="pills" role="radiogroup">
+              <label class="pill"><input type="radio" name="property_type" value="Home"><span>Home</span></label>
+              <label class="pill"><input type="radio" name="property_type" value="Commercial" checked><span>Commercial</span></label>
+              <label class="pill"><input type="radio" name="property_type" value="Industrial"><span>Industrial</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <select class="input" name="monthly_bill" required aria-label="Monthly electricity bill">
+              <option value="" disabled selected>Monthly electricity bill</option>
+              <option>₹2,000 - ₹5,000</option>
+              <option>₹5,000 - ₹10,000</option>
+              <option>₹10,000 - ₹25,000</option>
+              <option>₹25,000 - ₹50,000</option>
+              <option>₹50,000+</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-sun btn-block" data-track="CTA_Click" data-ctx="Hero Form Submit">Get my free assessment →</button>
+          <p class="form-note">No spam. A solar expert will call to schedule your free site visit.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust -->
+<section class="trust" aria-label="Why customers trust Enerjoy">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item"><b>Since 1996</b><span>Trusted legacy</span></div>
+      <div class="trust-item"><b>Free site visit</b><span>Zero obligation</span></div>
+      <div class="trust-item"><b>5-year warranty</b><span>Workmanship assurance</span></div>
+      <div class="trust-item"><b>Lifelong support</b><span>Dedicated technicians</span></div>
+      <div class="trust-item"><b>Customized solar</b><span>Precision engineering</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why solar -->
+<section class="section" id="why-solar">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The power reality</span>
+      <h2>Your electricity bill keeps coming. <span>Your solar system can keep working.</span></h2>
+    </div>
+    <div class="grid g3">
+      <article class="card">
+        <div class="icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Rising electricity costs</h3>
+        <p>Utility tariffs climb steadily. Every new AC, appliance or EV adds to your recurring expense, month after month.</p>
+      </article>
+      <article class="card">
+        <div class="icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>Escalating power demand</h3>
+        <p>Modern homes and businesses run on continuous, high-load energy. Relying on the grid exposes you to peak rates and fluctuations.</p>
+      </article>
+      <article class="card">
+        <div class="icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <h3>One-size-fits-all solar</h3>
+        <p>Generic packages fall short with poor roof orientation, unplanned shading and weak after-sales support.</p>
+      </article>
+    </div>
+    <p class="bridge">That's where <b>Enerjoy</b> comes in.</p>
+  </div>
+</section>
+
+<!-- Why Enerjoy -->
+<section class="section alt" id="why-enerjoy">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The engineered difference</span>
+      <h2>Solar built around your energy needs.</h2>
+      <p>We design rooftop systems for long-term returns and structural peace of mind.</p>
+    </div>
+    <div class="grid g2">
+      <article class="card feature">
+        <div class="icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/></svg></div>
+        <div><h3>Customized solutions</h3><p>Shadow-path analysis and structural load checks make sure your array delivers maximum units, every month.</p></div>
+      </article>
+      <article class="card feature">
+        <div class="icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+        <div><h3>End-to-end service</h3><p>From site inspection and Tier-1 panel procurement to safety earthing and TANGEDCO net-metering sync.</p></div>
+      </article>
+      <article class="card feature">
+        <div class="icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg></div>
+        <div><h3>Subsidy assistance</h3><p>Full support with government rooftop solar subsidy applications, portal documentation and registration.</p></div>
+      </article>
+      <article class="card feature">
+        <div class="icon-box"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+        <div><h3>Long-term support</h3><p>Dedicated engineering support, preventive maintenance and responsive local technicians.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">A clear, transparent process</span>
+      <h2>Four steps to solar independence</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h3>Free site visit</h3><p>Our solar engineer checks your roof dimensions, structural strength, shade and electrical setup at no cost.</p></div>
+      <div class="step"><div class="step-num">2</div><h3>System design</h3><p>You get a 3D rooftop design, exact plant sizing, equipment specifications and a savings breakdown.</p></div>
+      <div class="step"><div class="step-num">3</div><h3>Installation</h3><p>Certified technicians mount Tier-1 panels, set up inverters, complete earthing and sync net metering.</p></div>
+      <div class="step"><div class="step-num">4</div><h3>Long-term support</h3><p>Your plant starts generating clean power, backed by a 5-year workmanship warranty and ongoing care.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Solutions -->
+<section class="section alt" id="solutions">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Tailored infrastructure</span>
+      <h2>Solar solutions for every property</h2>
+    </div>
+    <div class="grid g3">
+      <article class="card sol">
+        <div class="sol-art">
+          <img src="sol_home_real.jpg" alt="Home solar installation on modern villa" />
+          <span class="sol-chip">Residential</span>
+        </div>
+        <div class="sol-body">
+          <h3>Home solar</h3>
+          <p>For independent houses, villas and residential rooftops. Cut monthly power bills and gain energy independence.</p>
+          <ul class="checks">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Government subsidy assistance</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Customized rooftop layout</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card sol">
+        <div class="sol-art">
+          <img src="sol_commercial_real.jpg" alt="Commercial building rooftop solar system" />
+          <span class="sol-chip">Commercial</span>
+        </div>
+        <div class="sol-body">
+          <h3>Commercial solar</h3>
+          <p>For offices, schools, hospitals and commercial complexes looking to cut high daytime power tariffs.</p>
+          <ul class="checks">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Accelerated depreciation benefits</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>High daytime generation return</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card sol">
+        <div class="sol-art">
+          <img src="sol_industrial_real.jpg" alt="Industrial factory rooftop solar plant" />
+          <span class="sol-chip">Industrial</span>
+        </div>
+        <div class="sol-body">
+          <h3>Industrial solar</h3>
+          <p>High-capacity plants engineered for factories, manufacturing facilities and warehouses with heavy loads.</p>
+          <ul class="checks">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Custom high-capacity engineering</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Maximum operational ROI</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <div class="center-cta"><a href="#hero-form" class="btn btn-sun" data-track="CTA_Click" data-ctx="Find My Solar Solution">Find my solar solution →</a></div>
+  </div>
+</section>
+
+<!-- Assessment -->
+<section class="section" id="assessment">
+  <div class="container assess">
+    <div class="split-head">
+      <span class="eyebrow">System estimator</span>
+      <h2>What could your electricity bill look like with solar?</h2>
+      <p>Move the slider to see the plant capacity your bill points to, then request a site-verified assessment.</p>
+      <div class="estimator" aria-live="polite">
+        <h4>System sizing preview</h4>
+        <div class="est-grid">
+          <div class="est"><span>Recommended capacity</span><b id="est-capacity">7 kW</b></div>
+          <div class="est"><span>Est. monthly generation</span><b id="est-units">~840 units</b></div>
+          <div class="est"><span>Rooftop area needed</span><b id="est-area">~700 sq.ft.</b></div>
+          <div class="est"><span>Grid offset target</span><b class="hi">Up to 90%</b></div>
+        </div>
+        <p class="est-foot">Indicative estimate only. Final sizing is confirmed at your free site visit.</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h3 class="form-title">Get your personalized solar assessment</h3>
+      <p class="form-desc">Submit your details for a site-verified calculation.</p>
+      <form class="lead-form" data-form-location="Solar Assessment Calculator">
+        <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign">
+        <div class="field">
+          <label for="bill">Monthly electricity bill</label>
+          <div class="slider-val" id="bill-display">₹6,000 / month</div>
+          <input type="range" id="bill" name="monthly_bill_num" min="2000" max="50000" step="1000" value="6000">
+          <div class="range-scale"><span>₹2,000</span><span>₹50,000</span></div>
+        </div>
+        <div class="field">
+          <label for="prop">Property type</label>
+          <select id="prop" name="property_type" class="input">
+            <option value="Home" selected>Home (residential)</option>
+            <option value="Commercial">Commercial building / office</option>
+            <option value="Industrial">Industrial factory / warehouse</option>
+          </select>
+        </div>
+        <div class="field"><label for="c-name">Full name</label><input class="input" id="c-name" type="text" name="name" placeholder="Enter your full name" autocomplete="name" required></div>
+        <div class="field"><label for="c-phone">Phone number</label><input class="input" id="c-phone" type="tel" name="phone" placeholder="10-digit mobile number" inputmode="numeric" pattern="[0-9]{10}" title="Enter a valid 10-digit phone number" required></div>
+        <div class="field"><label for="c-email">Email address</label><input class="input" id="c-email" type="email" name="email" placeholder="name@example.com" autocomplete="email" required></div>
+        <div class="field"><label for="c-loc">City / location</label><input class="input" id="c-loc" type="text" name="location" placeholder="e.g. Chennai" required></div>
+        <button type="submit" class="btn btn-sun btn-block" data-track="CTA_Click" data-ctx="Assessment Form Submit">Calculate my solar requirement →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Founder -->
+<section class="section alt" id="founder">
+  <div class="container">
+    <div class="founder">
+      <div class="founder-art">
+        <img src="aravindh.jpg" alt="Er. Aravind J, Founder &amp; CEO, Enerjoy Solar" class="founder-photo" />
+      </div>
+      <div class="founder-body">
+        <span class="eyebrow">Leadership integrity</span>
+        <h2>Er. Aravind J</h2>
+        <p class="role">Founder &amp; CEO, Enerjoy Solar</p>
+        <blockquote>“Solar is an investment meant to generate clean power for 25+ years. At Enerjoy, we built our reputation by taking no shortcuts. Every rooftop system we design is custom-engineered for maximum output, structural durability, and lifetime service support.”</blockquote>
+        <div class="badges"><span class="badge">Engineering-first approach</span><span class="badge">28+ year enterprise heritage</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container faq-wrap">
+    <div class="section-head">
+      <span class="eyebrow">Clear answers</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>Is the site visit free?</span><span class="faq-ico" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div><p>Yes, 100% free with zero obligation. Our solar engineer will visit your property, evaluate your rooftop area, structural readiness and shadow angles, and give you an accurate custom recommendation.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>What type of property can install solar?</span><span class="faq-ico" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div><p>We install rooftop systems for independent houses, villas, apartment rooftops, commercial offices, institutions, hospitals, factories and industrial warehouses.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>Can Enerjoy help with government subsidy?</span><span class="faq-ico" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div><p>Yes. We assist residential property owners with official rooftop solar subsidy applications, portal registration, documentation and compliance.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>How is the solar system size decided?</span><span class="faq-ico" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div><p>Capacity is based on your monthly consumption (units), the shadow-free rooftop area available, and your sanctioned load.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>Do you provide installation support?</span><span class="faq-ico" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div><p>Yes. Enerjoy handles full end-to-end installation: mounting structures, Tier-1 modules, grid inverters, safety earthing, lightning arresters and TANGEDCO net-metering synchronization.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span>What warranty and after-sales support do you provide?</span><span class="faq-ico" aria-hidden="true">+</span></button>
+        <div class="faq-a"><div><p>Solar panels carry a 25-year performance warranty and inverters carry 5–10 years from the manufacturer. Enerjoy adds a 5-year workmanship warranty with ongoing local technician service.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final" id="final-lead-form">
+  <div class="panels" aria-hidden="true"></div>
+  <div class="container final-grid">
+    <div>
+      <div class="hero-tag">MAKE THE SWITCH</div>
+      <h2>Ready to make the switch to solar?</h2>
+      <p class="final-sub">Book your free site visit today. No pressure, no obligation. Just clear answers.</p>
+      <div class="final-actions">
+        <a href="#final-form" class="btn btn-sun" data-track="CTA_Click" data-ctx="Final Get Free Assessment">Get my free solar assessment →</a>
+        <a href="https://wa.me/919962420007?text=Hi%20Enerjoy%20Solar,%20I%20want%20to%20book%20a%20free%20site%20visit." class="btn btn-glass" target="_blank" rel="noopener" data-track="WhatsApp_Click" data-ctx="Final WhatsApp CTA">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          WhatsApp us
+        </a>
+      </div>
+      <a href="tel:+919962420007" class="final-phone" data-track="Contact" data-ctx="Final Section Phone">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 99624 20007
+      </a>
+    </div>
+    <div id="final-form">
+      <div class="form-card">
+        <h2 class="form-title">Request your free consultation</h2>
+        <p class="form-desc">We'll call you to fix a convenient time for the site visit.</p>
+        <form class="lead-form" data-form-location="Final Section">
+          <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign">
+          <div class="field"><input class="input" type="text" name="name" placeholder="Full name" autocomplete="name" required aria-label="Full name"></div>
+          <div class="field"><input class="input" type="tel" name="phone" placeholder="Phone number" inputmode="numeric" pattern="[0-9]{10}" title="Enter a valid 10-digit phone number" required aria-label="Phone number"></div>
+          <div class="field"><input class="input" type="email" name="email" placeholder="Email address" autocomplete="email" required aria-label="Email address"></div>
+          <div class="field"><input class="input" type="text" name="location" placeholder="Location (city / area)" required aria-label="Location"></div>
+          <div class="field">
+            <span class="field-label">Property type</span>
+            <div class="pills" role="radiogroup">
+              <label class="pill"><input type="radio" name="final_property_type" value="Home"><span>Home</span></label>
+              <label class="pill"><input type="radio" name="final_property_type" value="Commercial" checked><span>Commercial</span></label>
+              <label class="pill"><input type="radio" name="final_property_type" value="Industrial"><span>Industrial</span></label>
+            </div>
+          </div>
+          <div class="field">
+            <select class="input" name="monthly_bill" required aria-label="Monthly electricity bill">
+              <option value="" disabled>Monthly electricity bill</option>
+              <option>₹2,000 - ₹5,000</option>
+              <option selected>₹5,000 - ₹10,000</option>
+              <option>₹10,000 - ₹25,000</option>
+              <option>₹25,000+</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-sun btn-block" data-track="CTA_Click" data-ctx="Final Form Submit">Request free consultation →</button>
+          <p class="form-note">No spam. A solar expert will call to schedule your free site visit.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="#" class="brand" aria-label="Enerjoy Solar home">
+          <img src="enerjoy_logo.png" alt="Enerjoy Solar" class="site-logo-footer" />
+        </a>
+        <p class="footer-tag">Smarter Energy. Lifelong Savings.</p>
+      </div>
+      <div class="footer-contact">
+        <div><b>Phone:</b> <a href="tel:+919962420007" data-track="Contact" data-ctx="Footer Phone">+91 99624 20007</a></div>
+        <div><b>Email:</b> <a href="mailto:info@enerjoysolar.com" data-track="Contact" data-ctx="Footer Email">info@enerjoysolar.com</a></div>
+        <div><b>Address:</b> 23/1, Sathya Moorthy Street, New Perungalthur, Chennai - 600063</div>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Enerjoy Solar. All rights reserved. Custom solar solutions for home, commercial &amp; industrial.</p>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="#hero-form" class="btn btn-sun" data-track="CTA_Click" data-ctx="Mobile Sticky CTA">Get free solar assessment</a>
+  <a href="https://wa.me/919962420007?text=Hi%20Enerjoy%20Solar,%20I%20came%20from%20Meta%20Ads%20and%20want%20a%20Free%20Solar%20Assessment." class="btn wa" aria-label="WhatsApp us" target="_blank" rel="noopener" data-track="WhatsApp_Click" data-ctx="Mobile Sticky WA">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+  </a>
+</div>
+
+<a href="https://wa.me/919962420007?text=Hi%20Enerjoy%20Solar,%20I%20would%20like%20to%20know%20more%20about%20rooftop%20solar%20installation." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" data-track="WhatsApp_Click" data-ctx="Floating WA Widget">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+</a>
+
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-dialog">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-ico">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    </div>
+    <span class="thankyou-badge">REQUEST RECEIVED 🎉</span>
+    <h3 id="modal-title">Thank You, <span id="modal-user-name">Friend</span>!</h3>
+    <p class="thankyou-subtitle">Your custom solar assessment request has been recorded.</p>
+    <div class="summary-card" id="modal-summary">
+      <div class="summary-row"><span>Email:</span> <strong id="sum-email">user@example.com</strong></div>
+      <div class="summary-row"><span>Property Type:</span> <strong id="sum-prop">Commercial</strong></div>
+      <div class="summary-row"><span>Location:</span> <strong id="sum-loc">Chennai</strong></div>
+      <div class="summary-row"><span>Monthly Bill:</span> <strong id="sum-bill">₹10,000 - ₹25,000</strong></div>
+    </div>
+    <p class="next-step-note">Lead solar engineer <strong>Er. Aravind J</strong> will review your location and contact you shortly.</p>
+    <div class="modal-actions">
+      <a href="https://wa.me/919962420007?text=Hi%20Enerjoy%20Solar,%20I%20just%20submitted%20my%20solar%20lead%20form%20on%20your%20website." class="btn btn-wa btn-block" target="_blank" rel="noopener" data-track="WhatsApp_Click" data-ctx="Modal WA Direct">Connect on WhatsApp now →</a>
+      <a href="tel:+919962420007" class="btn btn-outline btn-block" data-track="Contact" data-ctx="Modal Phone Direct">Call Expert: +91 99624 20007</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // Meta Pixel: paste your pixel base code on your live site; tracking calls below are safe if fbq is absent.
+  function track(ev,ctx){ try{ if(window.fbq) window.fbq('track',ev,{context:ctx}); }catch(e){} }
+
+  // Header scroll state
+  var header=document.getElementById('header');
+  function onScroll(){ header.classList.toggle('scrolled', window.scrollY>24); }
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  // Click tracking
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('[data-track]'); if(el) track(el.getAttribute('data-track'),el.getAttribute('data-ctx'));
+  });
+
+  // UTM capture
+  var params=new URLSearchParams(location.search);
+  document.querySelectorAll('input[type=hidden]').forEach(function(i){
+    if(params.get(i.name)) i.value=params.get(i.name);
+  });
+
+  // FAQ
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var btn=item.querySelector('.faq-q');
+    btn.addEventListener('click',function(){
+      var open=item.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open);
+    });
+  });
+
+  // Estimator
+  var slider=document.getElementById('bill'), prop=document.getElementById('prop');
+  var rate={Home:6.5,Commercial:9,Industrial:8};
+  function fmt(n){ return n.toLocaleString('en-IN'); }
+  function update(){
+    var bill=+slider.value, min=+slider.min, max=+slider.max;
+    slider.style.setProperty('--p',((bill-min)/(max-min)*100)+'%');
+    document.getElementById('bill-display').textContent='₹'+fmt(bill)+' / month';
+    var units=bill/rate[prop.value];
+    var kw=Math.max(1,Math.round(units/120*2)/2);
+    document.getElementById('est-capacity').textContent=kw+' kW';
+    document.getElementById('est-units').textContent='~'+fmt(Math.round(kw*120))+' units';
+    document.getElementById('est-area').textContent='~'+fmt(Math.round(kw*100))+' sq.ft.';
+  }
+  slider.addEventListener('input',update); prop.addEventListener('change',update); update();
+
+  // Forms & Google Sheets Integration
+  // Replace GOOGLE_SHEET_URL below with your deployed Google Apps Script Web App URL
+  var GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbz_DEPLOYED_WEB_APP_ID/exec";
+  var modal=document.getElementById('modal'), lastFocus;
+
+  function openModal(data){
+    lastFocus=document.activeElement;
+    if(data){
+      document.getElementById('modal-user-name').textContent = data.name || "Friend";
+      document.getElementById('sum-email').textContent = data.email || "N/A";
+      document.getElementById('sum-prop').textContent = data.property_type || "Standard";
+      document.getElementById('sum-loc').textContent = data.location || "Local Property";
+      document.getElementById('sum-bill').textContent = data.monthly_bill || "Standard Tariff";
+    }
+    modal.classList.add('show'); modal.setAttribute('aria-hidden','false'); document.getElementById('modal-close').focus();
+  }
+  function closeModal(){ modal.classList.remove('show'); modal.setAttribute('aria-hidden','true'); if(lastFocus) lastFocus.focus(); }
+
+  document.querySelectorAll('.lead-form').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var submitBtn = f.querySelector('button[type=submit]');
+      var origText = submitBtn ? submitBtn.textContent : '';
+      if(submitBtn){ submitBtn.disabled = true; submitBtn.textContent = 'Submitting your details...'; }
+
+      var data={}; new FormData(f).forEach(function(v,k){ data[k]=v; });
+      data.form_location=f.getAttribute('data-form-location');
+      data.timestamp=new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+
+      // Local storage backup log
+      try {
+        var existing = JSON.parse(localStorage.getItem('enerjoy_leads') || '[]');
+        existing.push(data);
+        localStorage.setItem('enerjoy_leads', JSON.stringify(existing));
+      } catch(err){}
+
+      // Post to Google Sheet Web App URL if configured
+      if(GOOGLE_SHEET_URL && !GOOGLE_SHEET_URL.includes('DEPLOYED_WEB_APP_ID')) {
+        fetch(GOOGLE_SHEET_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString()
+        }).catch(function(err){ console.log('Spreadsheet fetch error:', err); });
+      }
+
+      track('Lead',data.form_location);
+
+      setTimeout(function(){
+        if(submitBtn){ submitBtn.disabled = false; submitBtn.textContent = origText; }
+        f.reset();
+        if(typeof update === 'function') update();
+        openModal(data);
+      }, 500);
+    });
+  });
+  document.getElementById('modal-close').addEventListener('click',closeModal);
+  modal.addEventListener('click',function(e){ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && modal.classList.contains('show')) closeModal(); });
+})();
+</script>
+</body>
+</html>
