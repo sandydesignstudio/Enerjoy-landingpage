@@ -903,9 +903,11 @@ blockquote{color:#3b342c}
       var origText = submitBtn ? submitBtn.textContent : '';
       if(submitBtn){ submitBtn.disabled = true; submitBtn.textContent = 'Submitting your details...'; }
 
-      var data={}; new FormData(f).forEach(function(v,k){ data[k]=v; });
-      data.form_location=f.getAttribute('data-form-location');
-      data.timestamp=new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+      var data={}; new FormData(f).forEach(function(v,k){ if(v) data[k]=v; });
+      data.property_type = data.property_type || data.final_property_type || "Home";
+      data.monthly_bill = data.monthly_bill || (data.monthly_bill_num ? ("₹" + Number(data.monthly_bill_num).toLocaleString('en-IN') + " / month") : "₹5,000 - ₹10,000");
+      data.form_location = f.getAttribute('data-form-location');
+      data.timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
 
       // Local storage backup log
       try {
@@ -916,11 +918,12 @@ blockquote{color:#3b342c}
 
       // Post to Google Sheet Web App URL if configured
       if(GOOGLE_SHEET_URL && !GOOGLE_SHEET_URL.includes('DEPLOYED_WEB_APP_ID')) {
+        var formParams = new URLSearchParams(data).toString();
         fetch(GOOGLE_SHEET_URL, {
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(data).toString()
+          body: formParams
         }).catch(function(err){ console.log('Spreadsheet fetch error:', err); });
       }
 
