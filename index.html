@@ -933,8 +933,15 @@ blockquote{color:#3b342c}
         if(submitBtn){ submitBtn.disabled = false; submitBtn.textContent = origText; }
         f.reset();
         if(typeof update === 'function') update();
-        openModal(data);
-      }, 500);
+        var q = new URLSearchParams();
+        if(data.name) q.set('name', data.name);
+        if(data.phone) q.set('phone', data.phone);
+        if(data.email) q.set('email', data.email);
+        if(data.location) q.set('loc', data.location);
+        if(data.property_type) q.set('prop', data.property_type);
+        if(data.monthly_bill) q.set('bill', data.monthly_bill);
+        window.location.href = 'thank-you.html?' + q.toString();
+      }, 400);
     });
   });
   document.getElementById('modal-close').addEventListener('click',closeModal);
